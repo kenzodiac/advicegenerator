@@ -1,38 +1,85 @@
-.App {
+@font-face {
+  font-family: Manrope;
+  src: url(./Fonts/Manrope-VariableFont_wght.ttf);
+}
+
+:root {
+  --LightCyan: hsl(193, 38%, 86%);
+  --NeonGreen: hsl(150, 100%, 66%);
+  --GrayishBlue: hsl(217, 19%, 38%);
+  --DarkGrayishBlue: hsl(217, 19%, 24%);
+  --DarkBlue: hsl(218, 23%, 16%);
+}
+
+body {
+  background-color: var(--DarkBlue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Manrope;
+  font-weight: 800;
+}
+
+.advice-box{
+  background-color: var(--DarkGrayishBlue);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  min-height: 330px;
+  margin-right: 12px;
+  margin-left: 12px;
+  max-width: 536px;
+}
+
+.advice-title{
+  color: var(--NeonGreen);
+  letter-spacing: 4px;
+  font-size: 14px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.advice-txt-div{
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-bottom: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.advice-txt{
+  font-size: 28px;
+  line-height: 1.5;
+  color: var(--LightCyan);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.dice-div{
+  background-color: var(--NeonGreen);
+  padding: 1.25rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  top: 35px;
+}
+
+.dice-div:active{
+  box-shadow: 0 0 50px var(--NeonGreen);
+}
+
+@media screen and (max-width: 560px){
+  .advice-box {
+    max-width: calc(100vw - 24px);
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .advice-txt-div{
+    padding-right: 8vw;
+    padding-left: 8vw;
   }
-  to {
-    transform: rotate(360deg);
+
+  .divider-img{
+    max-width: calc(100vw - 32px);
   }
 }
